@@ -1,6 +1,14 @@
-__pycache__
-Include
-Lib
-Scripts
-share
+# Virtual environment (DO NOT include venv)
+venv/
+lib/
+Scripts/
+share/
+
+# Python cache & environment files
+__pycache__/
+.env
 .env.local
+pyvenv.cfg
+
+# Ignore Render build folder (if needed)
+.build/
