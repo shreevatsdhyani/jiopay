@@ -3,6 +3,7 @@ venv/
 lib/
 Scripts/
 share/
+Include/
 
 # Python cache & environment files
 __pycache__/
