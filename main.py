@@ -7,9 +7,14 @@ from groq import Groq
 import uvicorn
 import nest_asyncio
 from pyngrok import ngrok
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Ensure ngrok authentication is set
-NGROK_AUTH_TOKEN = "2tvpKEi9xNCH0Ppr215W8eOWXHl_4ZxQjwYiEV6xb2y4RSoAD"
+NGROK_AUTH_TOKEN = os.getenv("NGROK_AUTH_TOKEN")
 ngrok.set_auth_token(NGROK_AUTH_TOKEN)
 
 # Initialize FastAPI app
@@ -38,7 +43,7 @@ except Exception as e:
     vector_store = None
 
 # Initialize Groq Client
-GROQ_API_KEY = "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"
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 client = Groq(api_key=GROQ_API_KEY)
 
 class QueryRequest(BaseModel):
