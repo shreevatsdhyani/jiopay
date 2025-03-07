@@ -1,6 +1,6 @@
 # Virtual environment (DO NOT include venv)
 venv/
-lib/
+Lib/
 Scripts/
 share/
 Include/
